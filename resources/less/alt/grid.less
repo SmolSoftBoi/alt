@@ -1,0 +1,29 @@
+// Grid
+
+// Admin
+.container-admin {
+	.container-fluid();
+
+	.sidebar {
+		.make-sm-column(2);
+
+		@media (min-width: @screen-sm-min) {
+			position: fixed;
+			top: @navbar-height;
+			bottom: 0;
+			left: 0;
+			z-index: 1000;
+			display: block;
+			padding: @padding-large-vertical @padding-large-horizontal;
+			overflow-x: hidden;
+			overflow-y: auto;
+			background-color: @navbar-default-bg;
+			border-right: 1px solid @navbar-default-border;
+		}
+	}
+
+	.main {
+		.make-sm-column(10);
+		.make-sm-column-offset(2);
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"name": "alt",
+	"version": "1.0.0",
+	"bugs": {
+		"email": "kristian.matthews@me.com"
+	},
+	"author": {
+		"name": "Kristian Matthews",
+		"email": "kristian.matthews@me.com",
+		"url": "https://epickris.com"
+	},
+	"homepage": "https://epickris.com/alt",
+	"devDependencies": {
+		"grunt": ">=0.4.5",
+		"grunt-autoprefixer": ">=3.0.0",
+		"grunt-contrib-clean": ">=0.6.0",
+		"grunt-contrib-cssmin": ">=0.12.2",
+		"grunt-contrib-less": ">=1.0.0",
+		"grunt-contrib-watch": ">=0.6.1"
+	}
+}

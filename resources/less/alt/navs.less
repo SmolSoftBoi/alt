@@ -1,0 +1,146 @@
+// Navs
+
+// Main
+.nav-main {
+	.nav();
+	.pull-right();
+
+	> li {
+		float: left;
+		padding-right: @padding-large-horizontal;
+
+		> a {
+			border-bottom: 1px solid transparent;
+			color: white;
+
+			transition: all linear 0.5s;
+
+			&:hover,
+			&:focus {
+				background-color: inherit;
+				border-bottom-color: white;
+			}
+		}
+
+		&.active > a {
+			border-bottom-color: white;
+		}
+
+		&:last-child {
+			padding-right: 0;
+		}
+
+		> ul.dropdown-menu {
+			.dropdown-menu-right();
+			//display: block !important;
+			box-sizing: border-box;
+			margin-top: @padding-base-vertical + 10px;
+			opacity: 0;
+
+			transition: all linear 0.5s;
+
+			> .caret,
+			> .caret-me {
+				overflow: hidden;
+				position: absolute;
+				top: -10px;
+				right: @padding-base-horizontal;
+				left: auto;
+				margin: 0;
+				width: 18px;
+				height: 10px;
+				float: left;
+				border: none;
+
+				> .outer,
+				> .inner {
+					display: inline-block;
+					position: absolute;
+					margin-left: -1px;
+				}
+
+				> .outer {
+					top: 0;
+					left: 0;
+					width: auto;
+					height: auto;
+					border-right: 10px solid transparent;
+					border-bottom: 10px solid @dropdown-fallback-border;
+					border-bottom: 10px solid @dropdown-border;
+					border-left: 10px solid transparent;
+				}
+
+				> .inner {
+					top: 1px;
+					left: 1px;
+					border-right: 9px solid transparent;
+					border-bottom: 9px solid white;
+					border-left: 9px solid transparent;
+				}
+			}
+
+			> .caret-me {
+				right: 20px - (18px / 2) + 1px + 1px;
+			}
+
+			> li {
+				> a {
+					color: @brand-primary;
+				}
+			}
+		}
+	}
+
+	> li.open {
+		> a {
+			&,
+			&:hover,
+			&:focus {
+				background-color: inherit;
+				border-bottom-color: white;
+			}
+		}
+	}
+
+	> li.dropdown.open {
+		> a {
+			&,
+			&:hover,
+			&:focus {
+				border-bottom-color: transparent;
+			}
+		}
+
+		> ul.dropdown-menu {
+			height: auto;
+			width: auto;
+			opacity: 1;
+		}
+	}
+}
+
+// Admin
+.nav-sidebar {
+	.nav();
+	margin-right: -(@padding-large-horizontal + 1px);
+	margin-bottom: @padding-large-vertical;
+	margin-left: -(@padding-large-horizontal);
+
+	> li {
+		> a {
+			padding-right: @padding-large-horizontal;
+			padding-left: @padding-large-horizontal;
+		}
+
+		&.active {
+			> a {
+				&,
+				&:hover,
+				&:focus {
+					color: white;
+					background-color: @brand-primary;
+				}
+			}
+		}
+	}
+}

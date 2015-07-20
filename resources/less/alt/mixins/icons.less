@@ -1,0 +1,39 @@
+// Mixins Icons
+
+// Glyphish Outlined
+@font-face {
+	font-family: 'Glyphish';
+	src: url('../fonts/glyphish-outlined.eot');
+	src: url('../fonts/glyphish-outlined.eot#iefix') format('embedded-opentype'),
+	     url('../fonts/glyphish-outlined.woff') format('woff'),
+	     url('../fonts/glyphish-outlined.ttf') format('truetype'),
+	     url('../fonts/glyphish-outlined.svg#SSGlyphishOutlined') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+// Glyphish Filled
+@font-face {
+	font-family: 'Glyphish';
+	src: url('../fonts/glyphish-filled.eot');
+	src: url('../fonts/glyphish-filled.eot#iefix') format('embedded-opentype'),
+	     url('../fonts/glyphish-filled.woff') format('woff'),
+	     url('../fonts/glyphish-filled.ttf') format('truetype'),
+	     url('../fonts/glyphish-filled.svg#SSGlyphishFilled') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+.icon-defaults() {
+	&:before {
+		position: relative;
+		top: 2px;
+		display: inline-block;
+		font-family: 'Glyphish';
+		font-weight: normal;
+		line-height: 1;
+		text-rendering: optimizeLegibility;
+		white-space: nowrap;
+		font-feature-settings: liga;
+	}
+}
